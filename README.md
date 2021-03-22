@@ -1,3 +1,2 @@
 # fasm
-32 bits memory flat assembler
-all kind of code
+fasm compiler and 32bits and 16bits compilers assembler sample
