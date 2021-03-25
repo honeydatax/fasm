@@ -16,7 +16,7 @@ int 0x21
 	mov es,ax	
 	mov dx,string1
 	mov ah,9
-int 0x21
+int 0xf1
 exit:
 	mov ax,0x4c00
 	int 0x21
