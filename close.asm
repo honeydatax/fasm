@@ -1,0 +1,13 @@
+org 0x100
+mov ax,3
+int 0x10
+mov al,0
+mov ah,0x3d
+mov dx,fname
+int 0x21
+mov bx,ax
+mov ah,0x3e
+int 0x21
+mov ax,0x4c00
+int 0x21
+fname db 'MY',0
