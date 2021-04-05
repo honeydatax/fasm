@@ -1,0 +1,30 @@
+org 0x100
+mov ax,3
+int 0x10
+mov al,0
+mov ah,0x3d
+mov dx,fname
+int 0x21
+push ax
+mov bx,ax
+mov al,0
+mov cx,0
+mov dx,8
+mov ah,0x42
+int 0x21
+pop bx
+push bx
+mov dx,outputs
+mov cx,8
+mov ah,0x3f
+int 0x21
+pop bx
+mov ah,0x3e
+int 0x21
+mov dx,outputs
+mov ah,9
+int 0x21
+mov ax,0x4c00
+int 0x21
+fname db 'MY',0
+outputs db '$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$',13,10,0
